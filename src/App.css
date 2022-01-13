@@ -7,3 +7,21 @@
   color:white;
   background-color: orangered;
 }
+
+.List{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  font-size:20px;
+}
+
+.Card{
+  border:2px solid gray;
+  box-shadow: 2px 2px 8px black;
+  text-align: center;
+  font-variant: small-caps;
+  margin:10px;
+  padding:15px;
+  width:500px;
+}
