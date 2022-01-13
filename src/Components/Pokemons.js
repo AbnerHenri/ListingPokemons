@@ -18,6 +18,12 @@ function Pokemons(){
             <div className="List">
                 {pokes.map( element =><div className="Card">{element.name}</div>)}
             </div>  
+
+        <div className="Buts">
+            <button>Próximo</button>
+            <button>Anterior</button>
+        </div>
+
         </div>
     )
 }

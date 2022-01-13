@@ -1,9 +1,10 @@
 .Header{
   text-align: center;
   font-size: 30px;
-  padding:5px;
+  font-family:Arial, Helvetica, sans-serif;
+  padding:20px;
+  margin-bottom:30px;
   width: 100vw;
-  height:2em;
   color:white;
   background-color: orangered;
 }
@@ -24,4 +25,21 @@
   margin:10px;
   padding:15px;
   width:500px;
+}
+
+.Buts{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* ---------------------------------------- */
+
+button{
+  padding:15px;
+  margin:25px;
+  border:none;
+  color:white;
+  border-radius: 10px;
+  background-color: orangered;
 }
