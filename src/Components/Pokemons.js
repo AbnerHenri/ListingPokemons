@@ -2,17 +2,27 @@ import React, { useEffect, useState } from "react";
 
 function Pokemons(){
 
+    const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon')
     const [pokes, setPokes] = useState([])
 
-      useEffect( async ()=>{
-        const response = await fetch('https://pokeapi.co/api/v2/pokemon')
+      useEffect(async()=>{
+        const response = await fetch(url)
         const data = await response.json();
         const result = await data.results
         console.log(result)
         setPokes(result)
-      },[])
-  
+      },[url])
+        
+      
+      function nextPage(){
+          setUrl('https://pokeapi.co/api/v2/pokemon?offset=300&limit=100')
+      }
 
+      function previousPage(){
+          setUrl('https://pokeapi.co/api/v2/pokemon?offset=100&limit=100')
+      }
+      
+        
     return(
         <div>
             <div className="List">
@@ -20,8 +30,8 @@ function Pokemons(){
             </div>  
 
         <div className="Buts">
-            <button>Próximo</button>
-            <button>Anterior</button>
+            <button onClick={previousPage}>Anterior</button>
+            <button onClick={nextPage}>Próximo</button>
         </div>
 
         </div>
