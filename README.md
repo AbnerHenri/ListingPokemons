@@ -4,6 +4,8 @@
 
 <img src='./public/Assets/Animação.gif'>
 
+<hr>
+
 ### 🚀 Tecnologias
 
 - HTML
